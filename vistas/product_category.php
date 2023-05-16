@@ -3,7 +3,7 @@
     <h2 class="subtitle">Lista de productos por categoría</h2>
 </div>
 
-<div class="container pb-6 pt-6">
+<div class="container pb-1 pt-1">
     <?php
     require_once "./php/main.php";
     ?>
@@ -26,11 +26,12 @@
         </div>
         <div class="column">
             <?php
-            $categoria_id = (isset($_GET['tcategory_id'])) ? $_GET['tcategory_id'] : 0;
+            $categoria_id = (isset($_GET['category_id'])) ? $_GET['category_id'] : 0;
 
             /*== Verificando categoria ==*/
             $check_categoria = conexion();
-            $check_categoria = $check_categoria->query("SELECT * FROM givz_tcategoria WHERE tcategoria_id='$categoria_id'");
+            $check_categoria = $check_categoria->query("SELECT * FROM givz_tcategoria 
+            WHERE tcategoria_id='$categoria_id'");
 
             if ($check_categoria->rowCount() > 0) {
 
@@ -59,7 +60,7 @@
 
                 $pagina = limpiar_cadena($pagina);
                 $url = "index.php?vista=product_category&category_id=$categoria_id&page="; /* <== */
-                $registros = 15;
+                $registros = 3;
                 $busqueda = "";
 
                 # Paginador producto #
