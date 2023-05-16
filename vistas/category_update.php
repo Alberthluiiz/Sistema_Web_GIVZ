@@ -5,49 +5,52 @@
 
 <div class="container pb-6 pt-6">
 	<?php
-		include "./inc/btn_back.php";
+	include "./inc/btn_back.php";
 
-		require_once "./php/main.php";
+	require_once "./php/main.php";
 
-		$id = (isset($_GET['category_id_up'])) ? $_GET['category_id_up'] : 0;
-		$id=limpiar_cadena($id);
+	$id = (isset($_GET['category_id_up'])) ? $_GET['category_id_up'] : 0;
+	$id = limpiar_cadena($id);
 
-		/*== Verificando categoria ==*/
-    	$check_categoria=conexion();
-    	$check_categoria=$check_categoria->query("SELECT * FROM categoria WHERE categoria_id='$id'");
+	/*== Verificando categoria ==*/
+	$check_categoria = conexion();
+	$check_categoria = $check_categoria
+		->query("SELECT * FROM givz_tcategoria WHERE tcategoria_id='$id'");
 
-        if($check_categoria->rowCount()>0){
-        	$datos=$check_categoria->fetch();
+	if ($check_categoria->rowCount() > 0) {
+		$datos = $check_categoria->fetch();
 	?>
 
-	<div class="form-rest mb-6 mt-6"></div>
+		<div class="form-rest mb-6 mt-6"></div>
 
-	<form action="./php/categoria_actualizar.php" method="POST" class="FormularioAjax" autocomplete="off" >
+		<form action="./php/categoria_actualizar.php" method="POST" class="FormularioAjax" autocomplete="off">
 
-		<input type="hidden" name="categoria_id" value="<?php echo $datos['categoria_id']; ?>" required >
+			<input type="hidden" name="tcategoria_id" value="<?php echo $datos['tcategoria_id']; ?>" required>
 
-		<div class="columns">
-		  	<div class="column">
-		    	<div class="control">
-					<label>Nombre</label>
-				  	<input class="input" type="text" name="categoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}" maxlength="50" required value="<?php echo $datos['categoria_nombre']; ?>" >
+			<div class="columns">
+				<div class="column">
+					<div class="control">
+						<label>Nombre</label>
+						<input class="input" type="text" name="tcategoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}" maxlength="50" required value="
+						<?php echo $datos['tcategoria_nombre']; ?>">
+					</div>
 				</div>
-		  	</div>
-		  	<div class="column">
-		    	<div class="control">
-					<label>Ubicación</label>
-				  	<input class="input" type="text" name="categoria_ubicacion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}" maxlength="150" value="<?php echo $datos['categoria_ubicacion']; ?>" >
+				<div class="column">
+					<div class="control">
+						<label>Ubicación</label>
+						<input class="input" type="text" name="tcategoria_ubicacion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}" maxlength="150" value="
+						<?php echo $datos['tcategoria_ubicacion']; ?>">
+					</div>
 				</div>
-		  	</div>
-		</div>
-		<p class="has-text-centered">
-			<button type="submit" class="button is-success is-rounded">Actualizar</button>
-		</p>
-	</form>
-	<?php 
-		}else{
-			include "./inc/error_alert.php";
-		}
-		$check_categoria=null;
+			</div>
+			<p class="has-text-centered">
+				<button type="submit" class="button is-success is-rounded">Actualizar</button>
+			</p>
+		</form>
+	<?php
+	} else {
+		include "./inc/error_alert.php";
+	}
+	$check_categoria = null;
 	?>
 </div>

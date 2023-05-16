@@ -5,10 +5,9 @@
 		<a href="index.php?vista=user_new">Agregar Nuevo Usuario</a>
 	</div>
 </div>
-<div class="container pb-6 pt-6">
 
-	<div class="form-rest mb-6 mt-6"></div>
-
+<div class="container pb-6 pt-1">
+	<div class="form-rest mb-6 mt-1"></div>
 	<form action="./php/usuario_guardar.php" method="POST" class="FormularioAjax" autocomplete="off">
 		<div class="columns">
 			<div class="column">
