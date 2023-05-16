@@ -2,7 +2,7 @@
 
     <div class="navbar-brand">
         <a class="navbar-item" href="index.php?vista=home">
-            <img src="./img/logo.png" width="65" height="28">
+            <img src="/img/Logo_VinzuPal_Hor.png" width="65" height="28">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -16,7 +16,7 @@
         <div class="navbar-start">
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Usuarios</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Usuarios</a>
 
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=user_new" class="navbar-item">Nuevo</a>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Categorías</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Categorías</a>
 
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=category_new" class="navbar-item">Nueva</a>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Productos</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Productos</a>
 
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=product_new" class="navbar-item">Nuevo</a>
@@ -51,11 +51,19 @@
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                    <a href="index.php?vista=user_update&user_id_up=<?php echo $_SESSION['id']; ?>" class="button is-primary is-rounded">
+                    <!-- <a href="index.php?vista=user_update&user_id_up=<?php echo $_SESSION['id']; ?>" class="button is-primary is-rounded">
                         Mi cuenta
                     </a>
 
                     <a href="index.php?vista=logout" class="button is-link is-rounded">
+                        Salir
+                    </a> -->
+                    <a class=" has-text-black is-size-5 has-text-weight-bold mr-5" href="index.php?vista=user_update&user_id_up=
+                    <?php echo $_SESSION['id']; ?>">
+                        Mi cuenta
+                    </a>
+
+                    <a class=" has-text-black is-size-5 has-text-weight-bold " href="index.php?vista=logout">
                         Salir
                     </a>
                 </div>
