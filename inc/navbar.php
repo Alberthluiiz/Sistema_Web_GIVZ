@@ -14,7 +14,7 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-
+            <!-- Seccion Usuarios -->
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Usuarios</a>
 
@@ -24,7 +24,7 @@
                     <a href="index.php?vista=user_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
-
+            <!-- Seccion Categorias -->
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Categorías</a>
 
@@ -34,7 +34,7 @@
                     <a href="index.php?vista=category_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
-
+            <!-- Seccion Productos -->
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Productos</a>
 
@@ -45,6 +45,15 @@
                     <a href="index.php?vista=product_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
+            <!-- Seccion Ventas -->
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Ventas</a>
+
+                <div class="navbar-dropdown">
+                    <a href="index.php?vista=venta_new" class="navbar-item">Venta General</a>
+                    <a href="index.php?vista=cliente_new" class="navbar-item">Clientes</a>
+                </div>
+            </div>
         </div>
 
 
@@ -52,13 +61,6 @@
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                    <!-- <a href="index.php?vista=user_update&user_id_up=<?php echo $_SESSION['id']; ?>" class="button is-primary is-rounded">
-                        Mi cuenta
-                    </a>
-
-                    <a href="index.php?vista=logout" class="button is-link is-rounded">
-                        Salir
-                    </a> -->
                     <a class=" has-text-black is-size-5 has-text-weight-bold mr-5" href="index.php?vista=user_update&user_id_up=
                     <?php echo $_SESSION['id']; ?>">
                         Mi cuenta
