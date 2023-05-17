@@ -66,7 +66,10 @@ if ($ubicacion != "") {
 /*== Verificando nombre ==*/
 if ($nombre != $datos['tcategoria_nombre']) {
     $check_nombre = conexion();
-    $check_nombre = $check_nombre->query("SELECT tcategoria_nombre FROM givz_tcategoria WHERE tcategoria_nombre='$nombre'");
+    $check_nombre = $check_nombre
+        ->query("SELECT tcategoria_nombre 
+                    FROM givz_tcategoria 
+                    WHERE tcategoria_nombre='$nombre'");
     if ($check_nombre->rowCount() > 0) {
         echo '
 	            <div class="notification is-danger is-light">
@@ -83,7 +86,9 @@ if ($nombre != $datos['tcategoria_nombre']) {
 /*== Actualizar datos ==*/
 $actualizar_categoria = conexion();
 $actualizar_categoria = $actualizar_categoria
-    ->prepare("UPDATE givz_tcategoria SET tcategoria_nombre=:nombre,tcategoria_ubicacion=:ubicacion WHERE tcategoria_id=:id");
+    ->prepare("UPDATE givz_tcategoria 
+                SET tcategoria_nombre=:nombre,tcategoria_ubicacion=:ubicacion 
+                WHERE tcategoria_id=:id");
 
 $marcadores = [
     ":nombre" => $nombre,

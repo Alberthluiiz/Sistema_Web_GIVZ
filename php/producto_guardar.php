@@ -68,7 +68,10 @@ if (verificar_datos("[0-9]{1,25}", $stock)) {
 
 /*== Verificando codigo ==*/
 $check_codigo = conexion();
-$check_codigo = $check_codigo->query("SELECT tproducto_codigo FROM givz_tproducto WHERE tproducto_codigo='$codigo'");
+$check_codigo = $check_codigo
+    ->query("SELECT tproducto_codigo 
+                FROM givz_tproducto 
+                WHERE tproducto_codigo='$codigo'");
 if ($check_codigo->rowCount() > 0) {
     echo '
             <div class="notification is-danger is-light">
@@ -83,7 +86,10 @@ $check_codigo = null;
 
 /*== Verificando nombre ==*/
 $check_nombre = conexion();
-$check_nombre = $check_nombre->query("SELECT tproducto_nombre FROM givz_tproducto WHERE tproducto_nombre='$nombre'");
+$check_nombre = $check_nombre
+    ->query("SELECT tproducto_nombre 
+                FROM givz_tproducto 
+                WHERE tproducto_nombre='$nombre'");
 if ($check_nombre->rowCount() > 0) {
     echo '
             <div class="notification is-danger is-light">
@@ -98,7 +104,10 @@ $check_nombre = null;
 
 /*== Verificando categoria ==*/
 $check_categoria = conexion();
-$check_categoria = $check_categoria->query("SELECT tcategoria_id FROM givz_tcategoria WHERE tcategoria_id='$categoria'");
+$check_categoria = $check_categoria
+    ->query("SELECT tcategoria_id 
+                FROM givz_tcategoria 
+                WHERE tcategoria_id='$categoria'");
 if ($check_categoria->rowCount() <= 0) {
     echo '
             <div class="notification is-danger is-light">

@@ -4,9 +4,18 @@ $tabla = "";
 
 if (isset($busqueda) && $busqueda != "") {
 
-	$consulta_datos = "SELECT * FROM givz_tcategoria WHERE tcategoria_nombre LIKE '%$busqueda%' OR tcategoria_ubicacion LIKE '%$busqueda%' ORDER BY tcategoria_nombre ASC LIMIT $inicio,$registros";
+	$consulta_datos = "SELECT * FROM givz_tcategoria 
+						WHERE tcategoria_nombre 
+						LIKE '%$busqueda%' OR tcategoria_ubicacion 
+						LIKE '%$busqueda%' ORDER BY tcategoria_nombre 
+						ASC LIMIT $inicio,$registros";
 
-	$consulta_total = "SELECT COUNT(tcategoria_id) FROM givz_tcategoria WHERE tcategoria_nombre LIKE '%$busqueda%' OR tcategoria_ubicacion LIKE '%$busqueda%'";
+	$consulta_total = "SELECT COUNT(tcategoria_id) 
+						FROM givz_tcategoria 
+						WHERE tcategoria_nombre 
+						LIKE '%$busqueda%' 
+						OR tcategoria_ubicacion 
+						LIKE '%$busqueda%'";
 } else {
 
 	$consulta_datos = "SELECT * FROM givz_tcategoria ORDER BY tcategoria_nombre ASC LIMIT $inicio,$registros";

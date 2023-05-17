@@ -42,7 +42,7 @@
                 <form class="has-text-centered mt-6 mb-2" action="" method="POST" autocomplete="off">
                     <input type="hidden" name="modulo_buscador" value="categoria">
                     <input type="hidden" name="eliminar_buscador" value="categoria">
-                    <button type="submit" class="button is-danger is-rounded">Eliminar busqueda</button>
+                    <button type="submit" class="button is-danger is-rounded">Realizar otra busqueda</button>
                 </form>
             </div>
         </div>

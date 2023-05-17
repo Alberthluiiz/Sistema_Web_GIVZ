@@ -8,7 +8,9 @@ $id = limpiar_cadena($_POST['tusuario_id']);
 
 /*== Verificando usuario ==*/
 $check_usuario = conexion();
-$check_usuario = $check_usuario->query("SELECT * FROM givz_tusuario WHERE tusuario_id='$id'");
+$check_usuario = $check_usuario
+    ->query("SELECT * FROM givz_tusuario 
+                WHERE tusuario_id='$id'");
 
 if ($check_usuario->rowCount() <= 0) {
     echo '
@@ -64,7 +66,11 @@ if (verificar_datos("[a-zA-Z0-9$@.-]{7,100}", $admin_clave)) {
 
 /*== Verificando el administrador en DB ==*/
 $check_admin = conexion();
-$check_admin = $check_admin->query("SELECT tusuario_usuario,tusuario_clave FROM givz_tusuario WHERE tusuario_usuario='$admin_usuario' AND tusuario_id='" . $_SESSION['id'] . "'");
+$check_admin = $check_admin
+    ->query("SELECT tusuario_usuario,tusuario_clave 
+                FROM givz_tusuario 
+                WHERE tusuario_usuario='$admin_usuario' 
+                AND tusuario_id='" . $_SESSION['id'] . "'");
 if ($check_admin->rowCount() == 1) {
 
     $check_admin = $check_admin->fetch();
@@ -149,7 +155,10 @@ if (verificar_datos("[a-zA-Z0-9]{4,20}", $usuario)) {
 if ($email != "" && $email != $datos['tusuario_email']) {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $check_email = conexion();
-        $check_email = $check_email->query("SELECT tusuario_email FROM givz_tusuario WHERE tusuario_email='$email'");
+        $check_email = $check_email
+            ->query("SELECT tusuario_email 
+                        FROM givz_tusuario 
+                        WHERE tusuario_email='$email'");
         if ($check_email->rowCount() > 0) {
             echo '
                     <div class="notification is-danger is-light">
@@ -175,7 +184,10 @@ if ($email != "" && $email != $datos['tusuario_email']) {
 /*== Verificando usuario ==*/
 if ($usuario != $datos['tusuario_usuario']) {
     $check_usuario = conexion();
-    $check_usuario = $check_usuario->query("SELECT tusuario_usuario FROM givz_tusuario WHERE tusuario_usuario='$usuario'");
+    $check_usuario = $check_usuario
+        ->query("SELECT tusuario_usuario 
+                    FROM givz_tusuario 
+                    WHERE tusuario_usuario='$usuario'");
     if ($check_usuario->rowCount() > 0) {
         echo '
 	            <div class="notification is-danger is-light">
@@ -219,7 +231,10 @@ if ($clave_1 != "" || $clave_2 != "") {
 
 /*== Actualizar datos ==*/
 $actualizar_usuario = conexion();
-$actualizar_usuario = $actualizar_usuario->prepare("UPDATE givz_tusuario SET tusuario_nombre=:nombre,tusuario_apellido=:apellido,tusuario_usuario=:usuario,tusuario_clave=:clave,tusuario_email=:email WHERE tusuario_id=:id");
+$actualizar_usuario = $actualizar_usuario
+    ->prepare("UPDATE givz_tusuario 
+                SET tusuario_nombre=:nombre,tusuario_apellido=:apellido,tusuario_usuario=:usuario,tusuario_clave=:clave,tusuario_email=:email 
+                WHERE tusuario_id=:id");
 
 $marcadores = [
     ":nombre" => $nombre,

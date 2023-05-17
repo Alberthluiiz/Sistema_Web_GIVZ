@@ -1,4 +1,4 @@
-<div class="container is-fluid mb-6">
+<div class="container is-fluid mb-2">
 	<h1 class="title">Categorías</h1>
 	<h2 class="subtitle">Nueva categoría</h2>
 	<div class=" column">
@@ -8,7 +8,7 @@
 
 <div class="container pb-6 pt-1">
 
-	<div class="form-rest mb-6 mt-1"></div>
+	<div class="form-rest mb-5 mt-1"></div>
 
 	<form action="./php/categoria_guardar.php" method="POST" class="FormularioAjax" autocomplete="off">
 		<div class="columns">

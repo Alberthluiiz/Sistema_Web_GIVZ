@@ -89,7 +89,10 @@ if (verificar_datos("[0-9]{1,25}", $stock)) {
 /*== Verificando codigo ==*/
 if ($codigo != $datos['tproducto_codigo']) {
     $check_codigo = conexion();
-    $check_codigo = $check_codigo->query("SELECT tproducto_codigo FROM givz_tproducto WHERE tproducto_codigo='$codigo'");
+    $check_codigo = $check_codigo
+        ->query("SELECT tproducto_codigo 
+                                FROM givz_tproducto 
+                                WHERE tproducto_codigo='$codigo'");
     if ($check_codigo->rowCount() > 0) {
         echo '
 	            <div class="notification is-danger is-light">
@@ -106,7 +109,10 @@ if ($codigo != $datos['tproducto_codigo']) {
 /*== Verificando nombre ==*/
 if ($nombre != $datos['tproducto_nombre']) {
     $check_nombre = conexion();
-    $check_nombre = $check_nombre->query("SELECT tproducto_nombre FROM givz_tproducto WHERE tproducto_nombre='$nombre'");
+    $check_nombre = $check_nombre
+        ->query("SELECT tproducto_nombre 
+                                    FROM givz_tproducto 
+                                    WHERE tproducto_nombre='$nombre'");
     if ($check_nombre->rowCount() > 0) {
         echo '
 	            <div class="notification is-danger is-light">
@@ -123,7 +129,10 @@ if ($nombre != $datos['tproducto_nombre']) {
 /*== Verificando categoria ==*/
 if ($categoria != $datos['tcategoria_id']) {
     $check_categoria = conexion();
-    $check_categoria = $check_categoria->query("SELECT tcategoria_id FROM givz_tcategoria WHERE tcategoria_id='$categoria'");
+    $check_categoria = $check_categoria
+        ->query("SELECT tcategoria_id 
+                    FROM givz_tcategoria 
+                    WHERE tcategoria_id='$categoria'");
     if ($check_categoria->rowCount() <= 0) {
         echo '
 	            <div class="notification is-danger is-light">
@@ -139,7 +148,8 @@ if ($categoria != $datos['tcategoria_id']) {
 
 /*== Actualizando datos ==*/
 $actualizar_producto = conexion();
-$actualizar_producto = $actualizar_producto->prepare("UPDATE producto 
+$actualizar_producto = $actualizar_producto
+    ->prepare("UPDATE givz_tproducto 
         SET tproducto_codigo=:codigo,tproducto_nombre=:nombre,tproducto_precio=:precio,tproducto_stock=:stock,tcategoria_id=:categoria 
         WHERE tproducto_id=:id");
 

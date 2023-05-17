@@ -1,4 +1,4 @@
-<div class="container is-fluid mb-6">
+<div class="container is-fluid mb-1">
 	<h1 class="title">Usuarios</h1>
 	<h2 class="subtitle">Nuevo usuario</h2>
 	<div class=" column">

@@ -4,14 +4,20 @@ $tabla = "";
 
 if (isset($busqueda) && $busqueda != "") {
 
-	$consulta_datos = "SELECT * FROM givz_tusuario WHERE ((tusuario_id!='" . $_SESSION['id'] . "') AND (tusuario_nombre LIKE '%$busqueda%' OR tusuario_apellido LIKE '%$busqueda%' OR tusuario_usuario LIKE '%$busqueda%' OR tusuario_email LIKE '%$busqueda%')) ORDER BY tusuario_nombre ASC LIMIT $inicio,$registros";
+	$consulta_datos = "SELECT * FROM givz_tusuario 
+						WHERE ((tusuario_id!='" . $_SESSION['id'] . "') AND (tusuario_nombre LIKE '%$busqueda%' OR tusuario_apellido LIKE '%$busqueda%' OR tusuario_usuario LIKE '%$busqueda%' OR tusuario_email LIKE '%$busqueda%')) ORDER BY tusuario_nombre ASC LIMIT $inicio,$registros";
 
-	$consulta_total = "SELECT COUNT(tusuario_id) FROM givz_tusuario WHERE ((tusuario_id!='" . $_SESSION['id'] . "') AND (tusuario_nombre LIKE '%$busqueda%' OR tusuario_apellido LIKE '%$busqueda%' OR tusuario_usuario LIKE '%$busqueda%' OR tusuario_email LIKE '%$busqueda%'))";
+	$consulta_total = "SELECT COUNT(tusuario_id) 
+							FROM givz_tusuario 
+							WHERE ((tusuario_id!='" . $_SESSION['id'] . "') AND (tusuario_nombre LIKE '%$busqueda%' OR tusuario_apellido LIKE '%$busqueda%' OR tusuario_usuario LIKE '%$busqueda%' OR tusuario_email LIKE '%$busqueda%'))";
 } else {
 
-	$consulta_datos = "SELECT * FROM givz_tusuario WHERE tusuario_id!='" . $_SESSION['id'] . "' ORDER BY tusuario_nombre ASC LIMIT $inicio,$registros";
+	$consulta_datos = "SELECT * FROM givz_tusuario 
+						WHERE tusuario_id!='" . $_SESSION['id'] . "' ORDER BY tusuario_nombre ASC LIMIT $inicio,$registros";
 
-	$consulta_total = "SELECT COUNT(tusuario_id) FROM givz_tusuario WHERE tusuario_id!='" . $_SESSION['id'] . "'";
+	$consulta_total = "SELECT COUNT(tusuario_id) 
+							FROM givz_tusuario 
+							WHERE tusuario_id!='" . $_SESSION['id'] . "'";
 }
 
 $conexion = conexion();

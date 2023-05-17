@@ -31,15 +31,13 @@
 				<div class="column">
 					<div class="control">
 						<label>Nombre</label>
-						<input class="input" type="text" name="tcategoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}" maxlength="50" required value="
-						<?php echo $datos['tcategoria_nombre']; ?>">
+						<input class="input" type="text" name="tcategoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}" maxlength="50" required value="<?php echo $datos['tcategoria_nombre']; ?>">
 					</div>
 				</div>
 				<div class="column">
 					<div class="control">
 						<label>Ubicación</label>
-						<input class="input" type="text" name="tcategoria_ubicacion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}" maxlength="150" value="
-						<?php echo $datos['tcategoria_ubicacion']; ?>">
+						<input class="input" type="text" name="tcategoria_ubicacion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}" maxlength="150" value="<?php echo $datos['tcategoria_ubicacion']; ?>">
 					</div>
 				</div>
 			</div>
