@@ -4,7 +4,7 @@ require_once "./php/main.php";
 $id = (isset($_GET['user_id_up'])) ? $_GET['user_id_up'] : 0;
 $id = limpiar_cadena($id);
 ?>
-<div class="container is-fluid mb-6">
+<div class="container is-fluid mb-1">
 	<?php if ($id == $_SESSION['id']) { ?>
 		<h1 class="title">Mi cuenta</h1>
 		<h2 class="subtitle">Actualizar datos de cuenta</h2>
@@ -14,7 +14,7 @@ $id = limpiar_cadena($id);
 	<?php } ?>
 </div>
 
-<div class="container pb-6 pt-6">
+<div class="container pb-1 pt-3">
 	<?php
 
 	include "./inc/btn_back.php";
@@ -27,7 +27,7 @@ $id = limpiar_cadena($id);
 		$datos = $check_usuario->fetch();
 	?>
 
-		<div class="form-rest mb-6 mt-6"></div>
+		<div class="form-rest mb-6 mt-3"></div>
 
 		<form action="./php/usuario_actualizar.php" method="POST" class="FormularioAjax" autocomplete="off">
 

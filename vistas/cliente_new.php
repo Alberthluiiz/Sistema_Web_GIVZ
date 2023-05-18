@@ -30,14 +30,14 @@
             <div class="column">
                 <div class="control">
                     <label>Dirección</label>
-                    <input class="input" type="text" name="tcliente_direccion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,250}" maxlength="20" required>
+                    <input class="input" type="text" name="tcliente_direccion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,}" maxlength="200" required>
                 </div>
             </div>
             <!-- Ciudad -->
             <div class="column">
                 <div class="control">
                     <label>Ciudad</label>
-                    <input class="input" type="text" name="tcliente_ciudad" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}" maxlength="70" required>
+                    <input class="input" type="text" name="tcliente_ciudad" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,}" maxlength="70" required>
                 </div>
             </div>
         </div>
