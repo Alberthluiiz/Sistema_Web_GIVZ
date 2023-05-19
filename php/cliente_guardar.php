@@ -56,7 +56,7 @@ if (verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,}", $direccion))
     exit();
 }
 /* Ciudad */
-if (verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,}", $ciudad)) {
+if (verificar_datos("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}", $ciudad)) {
     echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
@@ -76,7 +76,7 @@ if (verificar_datos("[0-9]{7,12}", $telefono)) {
         ';
     exit();
 }
-/* Validacion del Email duplicado*/
+/* Email */
 if ($email != "") {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $check_email = conexion();
@@ -104,27 +104,6 @@ if ($email != "") {
         exit();
     }
 }
-
-/* Validación de cédula o RUC duplicado */
-if ($identificacion != "") {
-    $check_identificacion = conexion();
-    $check_identificacion = $check_identificacion
-        ->query("SELECT tcliente_identificacion
-                    FROM givz_tcliente
-                    WHERE tcliente_identificacion='$identificacion'");
-    if ($check_identificacion->rowCount() > 0) {
-        echo '
-            <div class="notification is-danger is-light">
-                <strong>¡Ocurrió un error inesperado!</strong><br>
-                La cédula o RUC ingresado ya se encuentra registrado, por favor elija otro
-            </div>
-        ';
-        exit();
-    }
-    $check_identificacion = null;
-}
-
-
 /* Guardamos los datos en la Base de Datos */
 $guardar_cliente = conexion();
 $guardar_cliente = $guardar_cliente
