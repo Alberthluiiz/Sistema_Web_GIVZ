@@ -14,14 +14,14 @@
             <div class="column">
                 <div class="control">
                     <label>Identificación</label>
-                    <input class="input" type="text" name="tcliente_identificacion" pattern="[0-9]{3,13}[- ]?[0-9]{3,7}[- ]?[0-9]{3,7}[- ]?[0-9]{1}" maxlength="40" required>
+                    <input class="input" type="text" name="tcliente_identificacion" pattern="[0-9]{3,13}[- ]?[0-9]{3,7}[- ]?[0-9]{3,7}[- ]?[0-9]{1}" maxlength="13" required>
                 </div>
             </div>
             <!-- Nombre del cliente  -->
             <div class="column">
                 <div class="control">
                     <label>Nombre</label>
-                    <input class="input" type="text" name="tcliente_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}" maxlength="40" required>
+                    <input class="input" type="text" name="tcliente_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}" maxlength="200" required>
                 </div>
             </div>
         </div>
@@ -30,14 +30,14 @@
             <div class="column">
                 <div class="control">
                     <label>Dirección</label>
-                    <input class="input" type="text" name="tcliente_direccion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,250}" maxlength="20" required>
+                    <input class="input" type="text" name="tcliente_direccion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,250}" maxlength="200" required>
                 </div>
             </div>
             <!-- Ciudad -->
             <div class="column">
                 <div class="control">
                     <label>Ciudad</label>
-                    <input class="input" type="text" name="tcliente_ciudad" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}" maxlength="70" required>
+                    <input class="input" type="text" name="tcliente_ciudad" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,250}" maxlength="200" required>
                 </div>
             </div>
         </div>
@@ -46,14 +46,14 @@
             <div class="column">
                 <div class="control">
                     <label>Telefono</label>
-                    <input class="input" type="text" name="tcliente_telefono" pattern="[0-9]{7,12}" maxlength="100" required>
+                    <input class="input" type="text" name="tcliente_telefono" pattern="[0-9]{7,12}" maxlength="15" required>
                 </div>
             </div>
             <!-- Correo electronico -->
             <div class="column">
                 <div class="control">
                     <label>Correo electronico</label>
-                    <input class="input" type="email" name="tcliente_email" maxlength="70">
+                    <input class="input" type="email" name="tcliente_email" maxlength="100">
                 </div>
             </div>
         </div>

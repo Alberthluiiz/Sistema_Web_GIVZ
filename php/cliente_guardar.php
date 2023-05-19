@@ -56,7 +56,7 @@ if (verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,}", $direccion))
     exit();
 }
 /* Ciudad */
-if (verificar_datos("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}", $ciudad)) {
+if (verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,250}", $ciudad)) {
     echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>

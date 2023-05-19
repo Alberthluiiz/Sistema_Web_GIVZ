@@ -45,13 +45,13 @@
                     <a href="index.php?vista=product_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
-            <!-- Seccion Ventas -->
+            <!-- Seccion Clientes -->
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Ventas</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Clientes</a>
 
                 <div class="navbar-dropdown">
-                    <a href="index.php?vista=venta_new" class="navbar-item">Venta General</a>
-                    <a href="index.php?vista=cliente_new" class="navbar-item">Clientes</a>
+                    <a href="index.php?vista=cliente_new" class="navbar-item">Nuevo</a>
+                    <a href="index.php?vista=cliente_list" class="navbar-item">Lista</a>
                 </div>
             </div>
         </div>
