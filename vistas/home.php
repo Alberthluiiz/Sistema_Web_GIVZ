@@ -1,4 +1,4 @@
-<div class="container is-fluid">
+<div class="container is-fluid mt-5">
 	<h1 class="title">Home</h1>
 	<h2 class="subtitle">¡Bienvenido <?php echo $_SESSION['nombre']; ?>!</h2>
 </div>
@@ -6,10 +6,7 @@
 <!-- Diseño de Presentacion -->
 
 <div class="container pb-6 pt-6">
-
 	<div class="form-rest mb-6 mt-6"></div>
-
-
 	<div class="columns">
 		<div class="column">
 			<div class="control">
@@ -29,8 +26,7 @@
 		</div>
 		<div class="column">
 			<div class="control">
-				<img src="/img/Logovinzu.png" width="500">
-				<!-- <img src="/img/logo_blanco.png" alt="400"> -->
+				<img src="./img/Logovinzu.png" width="500">
 			</div>
 		</div>
 	</div>
