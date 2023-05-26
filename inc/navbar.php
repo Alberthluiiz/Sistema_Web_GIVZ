@@ -52,23 +52,30 @@
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=cliente_new" class="navbar-item">Nuevo</a>
                     <a href="index.php?vista=cliente_list" class="navbar-item">Lista</a>
+                    <a href="index.php?vista=cliente_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
         </div>
-
-
 
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
                     <a class=" has-text-black is-size-5 has-text-weight-bold mr-5" href="index.php?vista=user_update&user_id_up=
                     <?php echo $_SESSION['id']; ?>">
+                        <span class="icon">
+                            <i class="fa-solid fa-circle-user mr-4"></i>
+                        </span>
                         Mi cuenta
                     </a>
-
-                    <a class=" has-text-black is-size-5 has-text-weight-bold " href="index.php?vista=logout">
+                    <!-- <a class=" has-text-black is-size-5 has-text-weight-bold " href="index.php?vista=logout">
                         Salir
+                    </a> -->
+                    <a href="index.php?vista=logout" class="ml-3 mr-4">
+                        <span class="icon">
+                            <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                        </span>
                     </a>
+
                 </div>
             </div>
         </div>

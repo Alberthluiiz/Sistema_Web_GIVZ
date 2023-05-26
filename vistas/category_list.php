@@ -2,7 +2,12 @@
     <h1 class="title">Categorías</h1>
     <h2 class="subtitle">Lista de categoría</h2>
     <div class=" column">
-        <a href="index.php?vista=category_list">Actualizar lista</a>
+        <a href="index.php?vista=category_list">
+            <span class="icon">
+                <i class="fa fa-sharp fa-solid fa-rotate-right" style="color: orange;"></i>
+            </span>
+            Actualizar
+        </a>
     </div>
 </div>
 

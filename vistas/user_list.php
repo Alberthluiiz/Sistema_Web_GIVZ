@@ -1,6 +1,14 @@
 <div class="container is-fluid mb-6">
     <h1 class="title">Usuarios</h1>
     <h2 class="subtitle">Lista de usuarios</h2>
+    <div class=" column">
+        <a href="index.php?vista=user_list">
+            <span class="icon">
+                <i class="fa fa-sharp fa-solid fa-rotate-right" style="color: orange;"></i>
+            </span>
+            Actualizar
+        </a>
+    </div>
 </div>
 
 <div class="container pb-6 pt-1">

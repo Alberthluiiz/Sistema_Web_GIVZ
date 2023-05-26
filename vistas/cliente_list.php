@@ -8,7 +8,7 @@
     require_once "./php/main.php";
 
     # Eliminar usuario #
-    if (isset($_GET['user_id_del'])) {
+    if (isset($_GET['cliente_id_del'])) {
         require_once "./php/cliente_eliminar.php";
     }
 

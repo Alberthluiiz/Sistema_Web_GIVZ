@@ -2,8 +2,14 @@
     <h1 class="title">Productos</h1>
     <h2 class="subtitle">Lista de productos</h2>
     <div class=" column">
-        <a href="index.php?vista=product_list">Actualizar lista</a>
+        <a href="index.php?vista=product_list">
+            <span class="icon">
+                <i class="fa fa-sharp fa-solid fa-rotate-right" style="color: orange;"></i>
+            </span>
+            Recargar
+        </a>
     </div>
+
 </div>
 
 <div class="container pb-6 pt-1">

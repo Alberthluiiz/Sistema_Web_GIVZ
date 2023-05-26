@@ -1,6 +1,6 @@
 <div class="container is-fluid mb-6">
-    <h1 class="title">Usuarios</h1>
-    <h2 class="subtitle">Buscar usuario</h2>
+    <h1 class="title">Clientes</h1>
+    <h2 class="subtitle">Buscar clientes</h2>
 </div>
 
 <div class="container pb-6 pt-1">
@@ -11,12 +11,12 @@
         require_once "./php/buscador.php";
     }
 
-    if (!isset($_SESSION['busqueda_usuario']) && empty($_SESSION['busqueda_usuario'])) {
+    if (!isset($_SESSION['busqueda_cliente']) && empty($_SESSION['busqueda_cliente'])) {
     ?>
         <div class="columns">
             <div class="column">
                 <form action="" method="POST" autocomplete="off">
-                    <input type="hidden" name="modulo_buscador" value="usuario">
+                    <input type="hidden" name="modulo_buscador" value="cliente">
                     <div class="field is-grouped">
                         <p class="control is-expanded">
                             <input class="input is-rounded" type="text" name="txt_buscador" placeholder="¿Qué estas buscando?" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,30}" maxlength="30">
@@ -32,24 +32,24 @@
         <div class="columns">
             <div class="column">
                 <form class="has-text-centered mt-6 mb-6" action="" method="POST" autocomplete="off">
-                    <input type="hidden" name="modulo_buscador" value="usuario">
-                    <input type="hidden" name="eliminar_buscador" value="usuario">
-                    <p>Estas buscando a <strong>“<?php echo $_SESSION['busqueda_usuario']; ?>”</strong></p>
+                    <input type="hidden" name="modulo_buscador" value="cliente">
+                    <input type="hidden" name="eliminar_buscador" value="cliente">
+                    <p>Estás buscando a <strong>“<?php echo $_SESSION['busqueda_cliente']; ?>”</strong></p>
                 </form>
             </div>
 
             <div class="column">
                 <form class="has-text-centered mt-6 mb-6" action="" method="POST" autocomplete="off">
-                    <input type="hidden" name="modulo_buscador" value="usuario">
-                    <input type="hidden" name="eliminar_buscador" value="usuario">
-                    <button type="submit" class="button is-danger is-rounded">Buscar otro usuario</button>
+                    <input type="hidden" name="modulo_buscador" value="cliente">
+                    <input type="hidden" name="eliminar_buscador" value="cliente">
+                    <button type="submit" class="button is-danger is-rounded">Buscar otro cliente</button>
                 </form>
             </div>
         </div>
     <?php
-        # Eliminar usuario #
-        if (isset($_GET['user_id_del'])) {
-            require_once "./php/usuario_eliminar.php";
+        // Eliminar cliente
+        if (isset($_GET['cliente_id_del'])) {
+            require_once "./php/cliente_eliminar.php";
         }
 
         if (!isset($_GET['page'])) {
@@ -60,14 +60,13 @@
                 $pagina = 1;
             }
         }
-
         $pagina = limpiar_cadena($pagina);
-        $url = "index.php?vista=user_search&page="; /* <== */
+        $url = "index.php?vista=cliente_search&page="; /* <== */
         $registros = 6;
-        $busqueda = $_SESSION['busqueda_usuario']; /* <== */
+        $busqueda = $_SESSION['busqueda_cliente']; /* <== */
 
-        # Paginador usuario #
-        require_once "./php/usuario_lista.php";
+        // Paginador cliente
+        require_once "./php/cliente_lista.php";
     }
     ?>
 </div>
