@@ -51,6 +51,7 @@ if ($check_user->rowCount() == 1) {
         $_SESSION['nombre'] = $check_user['tusuario_nombre'];
         $_SESSION['apellido'] = $check_user['tusuario_apellido'];
         $_SESSION['usuario'] = $check_user['tusuario_usuario'];
+        $_SESSION['email'] = $check_user['tusuario_email'];
 
         if (headers_sent()) {
             echo "<script> window.location.href='index.php?vista=home'; </script>";

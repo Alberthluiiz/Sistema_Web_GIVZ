@@ -1,19 +1,19 @@
-const formularios_ajax=document.querySelectorAll(".FormularioAjax");
+const formularios_ajax = document.querySelectorAll(".FormularioAjax");
 
-function enviar_formulario_ajax(e){
+function enviar_formulario_ajax(e) {
     e.preventDefault();
 
-    let enviar=confirm("Quieres enviar el formulario");
+    let enviar = confirm("Quieres enviar el formulario");
 
-    if(enviar==true){
+    if (enviar == true) {
 
-        let data= new FormData(this);
-        let method=this.getAttribute("method");
-        let action=this.getAttribute("action");
+        let data = new FormData(this);
+        let method = this.getAttribute("method");
+        let action = this.getAttribute("action");
 
-        let encabezados= new Headers();
+        let encabezados = new Headers();
 
-        let config={
+        let config = {
             method: method,
             headers: encabezados,
             mode: 'cors',
@@ -21,16 +21,17 @@ function enviar_formulario_ajax(e){
             body: data
         };
 
-        fetch(action,config)
-        .then(respuesta => respuesta.text())
-        .then(respuesta =>{ 
-            let contenedor=document.querySelector(".form-rest");
-            contenedor.innerHTML = respuesta;
-        });
+        fetch(action, config)
+            .then(respuesta => respuesta.text())
+            .then(respuesta => {
+                let contenedor = document.querySelector(".form-rest");
+                contenedor.innerHTML = respuesta;
+            });
     }
 
 }
 
+//Para recorrer todos los formularios
 formularios_ajax.forEach(formularios => {
-    formularios.addEventListener("submit",enviar_formulario_ajax);
+    formularios.addEventListener("submit", enviar_formulario_ajax);
 });

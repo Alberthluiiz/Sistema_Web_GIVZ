@@ -55,6 +55,15 @@
                     <a href="index.php?vista=cliente_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
+            <!-- Seccion Ventas -->
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Ventas</a>
+                <div class="navbar-dropdown">
+                    <a href="index.php?vista=venta_new" class="navbar-item">Nuevo</a>
+                    <a href="index.php?vista=venta_list" class="navbar-item">Lista</a>
+                    <a href="index.php?vista=venta_search" class="navbar-item">Buscar</a>
+                </div>
+            </div>
         </div>
 
         <div class="navbar-end">
