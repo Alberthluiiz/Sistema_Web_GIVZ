@@ -84,7 +84,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Tabla para ingresar -->
         <div class="columns">
             <div class="column">
