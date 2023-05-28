@@ -14,9 +14,7 @@ El archivo se encuentra en la carpeta (php) Solo debe de modificar la linea 6
 ### Archivos a modificar
 
 - Nombre de base de datos: givz_dbinventario
-
 - Usuario: "root"
-
 - Contraseña: " "
 
 ### Si tiene configurado el phpmyadmin con cotraseña debe colocar la contraseña.
