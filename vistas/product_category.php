@@ -1,6 +1,14 @@
 <div class="container is-fluid mb-6">
     <h1 class="title">Productos</h1>
     <h2 class="subtitle">Lista de productos por categoría</h2>
+    <div class=" column">
+        <a href="index.php?vista=product_list">
+            <span class="icon">
+                <i class="fa fa-solid fa-backward" style="color: orange;"></i>
+            </span>
+            Regresar
+        </a>
+    </div>
 </div>
 
 <div class="container pb-1 pt-1">

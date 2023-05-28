@@ -61,10 +61,16 @@ if ($total >= 1 && $pagina <= $Npaginas) {
                         <a href="index.php?vista=product_category&category_id=' . $rows['tcategoria_id'] . '" class="button is-link is-rounded is-small">Ver productos</a>
                     </td>
                     <td>
-                        <a href="index.php?vista=category_update&category_id_up=' . $rows['tcategoria_id'] . '" class="button is-success is-rounded is-small">Actualizar</a>
+                        <a href="index.php?vista=category_update&category_id_up=' . $rows['tcategoria_id'] . '" >
+						<span class="icon">
+                			<i class="fa fa-solid fa-pen-to-square" style="color: green;"></i>
+            			</span></a>
                     </td>
                     <td>
-                        <a href="' . $url . $pagina . '&category_id_del=' . $rows['tcategoria_id'] . '" class="button is-danger is-rounded is-small">Eliminar</a>
+                        <a href="' . $url . $pagina . '&category_id_del=' . $rows['tcategoria_id'] . '">
+						<span class ="icon">
+						<i class="fa fa-sharp fa-solid fa-trash" style="color: red;"></i>
+						</span></a>
                     </td>
                 </tr>
             ';

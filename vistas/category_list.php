@@ -9,6 +9,14 @@
             Actualizar
         </a>
     </div>
+    <div class=" column">
+        <a href="index.php?vista=category_new">
+            <span class="icon">
+                <i class="fa fa-solid fa-backward" style="color: orange;"></i>
+            </span>
+            Regresar
+        </a>
+    </div>
 </div>
 
 <div class="container pb-6 pt-1">

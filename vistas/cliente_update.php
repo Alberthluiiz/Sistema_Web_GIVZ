@@ -25,7 +25,7 @@
         <div class="column">
             <div class="is-pulled-right">
                 <a href="index.php?vista=cliente_list">
-                    <button type="submit" class="button is-info is-rounded"> <- Regresar Atras</button>
+                    <button type="submit" class="button is-info is-rounded">Regresar Atras</button>
                 </a>
             </div>
         </div>

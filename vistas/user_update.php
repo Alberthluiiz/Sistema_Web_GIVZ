@@ -14,7 +14,7 @@ $id = limpiar_cadena($id);
 	<?php } ?>
 </div>
 
-<div class="container pb-6 pt-6">
+<div class="container pb-1 pt-1">
 	<?php
 
 	include "./inc/btn_back.php";
@@ -27,7 +27,7 @@ $id = limpiar_cadena($id);
 		$datos = $check_usuario->fetch();
 	?>
 
-		<div class="form-rest mb-6 mt-6"></div>
+		<div class="form-rest mb-1 mt-1"></div>
 
 		<form action="./php/usuario_actualizar.php" method="POST" class="FormularioAjax" autocomplete="off">
 

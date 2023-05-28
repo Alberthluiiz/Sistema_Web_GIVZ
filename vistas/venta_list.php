@@ -1,6 +1,22 @@
 <div class="container is-fluid mb-6">
     <h1 class="title">Ventas</h1>
     <h2 class="subtitle">Lista de ventas</h2>
+    <div class=" column">
+        <a href="index.php?vista=venta_list">
+            <span class="icon">
+                <i class="fa fa-sharp fa-solid fa-rotate-right" style="color: orange;"></i>
+            </span>
+            Actualizar
+        </a>
+    </div>
+    <div class=" column">
+        <a href="index.php?vista=venta_new">
+            <span class="icon">
+                <i class="fa fa-solid fa-backward" style="color: orange;"></i>
+            </span>
+            Regresar
+        </a>
+    </div>
 </div>
 
 <div class="container pb-6 pt-1">

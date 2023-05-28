@@ -58,10 +58,16 @@ if ($total >= 1 && $pagina <= $Npaginas) {
                     <td>' . $rows['tusuario_usuario'] . '</td>
                     <td>' . $rows['tusuario_email'] . '</td>
                     <td>
-                        <a href="index.php?vista=user_update&user_id_up=' . $rows['tusuario_id'] . '" class="button is-success is-rounded is-small">Actualizar</a>
+                        <a href="index.php?vista=user_update&user_id_up=' . $rows['tusuario_id'] . '" ">
+						<span class="icon">
+                			<i class="fa fa-solid fa-pen-to-square" style="color: green;"></i>
+            			</span></a>
                     </td>
                     <td>
-                        <a href="' . $url . $pagina . '&user_id_del=' . $rows['tusuario_id'] . '" class="button is-danger is-rounded is-small">Eliminar</a>
+                        <a href="' . $url . $pagina . '&user_id_del=' . $rows['tusuario_id'] . '" >
+						<span class ="icon">
+						<i class="fa fa-sharp fa-solid fa-trash" style="color: red;"></i>
+						</span></a>
                     </td>
                 </tr>
             ';

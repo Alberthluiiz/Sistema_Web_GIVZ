@@ -16,7 +16,12 @@
         <div class="navbar-start">
             <!-- Seccion Usuarios -->
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Usuarios</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">
+                    <span class="icon">
+                        <!-- <i class="fa fa-solid fa-user mr-5"></i> -->
+                        <i class="fa fa-solid fa-users mr-5"></i>
+                    </span>
+                    Usuarios</a>
 
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=user_new" class="navbar-item">Nuevo</a>
@@ -26,7 +31,11 @@
             </div>
             <!-- Seccion Categorias -->
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Categorías</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">
+                    <span class=" icon">
+                        <i class="fa fa-solid fa-tag mr-5"></i>
+                    </span>
+                    Categorías</a>
 
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=category_new" class="navbar-item">Nueva</a>
@@ -36,7 +45,12 @@
             </div>
             <!-- Seccion Productos -->
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Productos</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">
+                    <span class="icon">
+                        <!-- <i class="fa fa-solid fa-shop mr-5"></i> -->
+                        <i class="fa fa-solid fa-box-open mr-5"></i>
+                    </span>
+                    Productos</a>
 
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=product_new" class="navbar-item">Nuevo</a>
@@ -47,7 +61,11 @@
             </div>
             <!-- Seccion Clientes -->
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Clientes</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">
+                    <span class="icon">
+                        <i class="fa fa-solid fa-user mr-5"></i>
+                    </span>
+                    Clientes</a>
 
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=cliente_new" class="navbar-item">Nuevo</a>
@@ -57,7 +75,11 @@
             </div>
             <!-- Seccion Ventas -->
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">Ventas</a>
+                <a class="navbar-link has-text-black has-text-weight-bold is-size-6 ">
+                    <span class="icon">
+                        <i class="fa fa-solid fa-cart-shopping mr-5"></i>
+                    </span>
+                    Ventas</a>
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=venta_new" class="navbar-item">Nuevo</a>
                     <a href="index.php?vista=venta_list" class="navbar-item">Lista</a>

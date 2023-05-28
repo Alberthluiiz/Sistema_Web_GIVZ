@@ -1,8 +1,19 @@
 <div class="container is-fluid mb-1">
     <h1 class="title">Ventas</h1>
     <h2 class="subtitle">Nueva Venta</h2>
-    <div class="column">
-        <a href="index.php?vista=product_new">Agregar nueva venta</a>
+    <div class=" column">
+        <a href="index.php?vista=venta_new">
+            <span class=" icon">
+                <i class="fa fa-solid fa-circle-plus" style="color: orange;"></i>
+            </span>
+            Agregar nueva venta</a>
+    </div>
+    <div class=" column">
+        <a href="index.php?vista=venta_list">
+            <span class=" icon">
+                <i class="fa fa-solid fa-forward" style="color: orange;"></i>
+            </span>
+            Ver venta registrada</a>
     </div>
 </div>
 

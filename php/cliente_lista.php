@@ -62,10 +62,16 @@ if ($total >= 1 && $pagina <= $Npaginas) {
                     <td>' . $rows['tcliente_telefono'] . '</td>
                     <td>' . $rows['tcliente_email'] . '</td>
                     <td>
-                        <a href="index.php?vista=cliente_update&cliente_id_up=' . $rows['tcliente_id'] . '" class="button is-success is-rounded is-small">Actualizara1</a>
+                        <a href="index.php?vista=cliente_update&cliente_id_up=' . $rows['tcliente_id'] . '">
+                        <span class="icon">
+                			<i class="fa fa-solid fa-pen-to-square" style="color: green;"></i>
+            			</span></a>
                     </td>
                     <td>
-                        <a href="' . $url . $pagina . '&cliente_id_del=' . $rows['tcliente_id'] . '" class="button is-danger is-rounded is-small">Eliminar</a>
+                        <a href="' . $url . $pagina . '&cliente_id_del=' . $rows['tcliente_id'] . '">
+                        <span class ="icon">
+						<i class="fa fa-sharp fa-solid fa-trash" style="color: red;"></i>
+						</span></a>
                     </td>
                 </tr>
             ';
