@@ -13,15 +13,15 @@ El archivo se encuentra en la carpeta (php) Solo debe de modificar la linea 6
 
 ### Archivos a modificar
 
--\*\* Nombre de base de datos: givz_dbinventario
+- Nombre de base de datos: givz_dbinventario
 
-- \*\* Usuario: "root"
+- Usuario: "root"
 
--\*\* Contraseña: " "
+- Contraseña: " "
 
 ### Si tiene configurado el phpmyadmin con cotraseña debe colocar la contraseña.
 
 4.- Una vez levantado el servidor puede ingresar al sistema con los siguientes datos
 
-- \*\* Usuario por defecto: Administrador
-- \*\* Clave: Administrador
+- Usuario por defecto: Administrador
+- Clave: Administrador
