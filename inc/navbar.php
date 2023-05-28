@@ -61,7 +61,6 @@
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=venta_new" class="navbar-item">Nuevo</a>
                     <a href="index.php?vista=venta_list" class="navbar-item">Lista</a>
-                    <a href="index.php?vista=venta_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
         </div>

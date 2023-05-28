@@ -50,7 +50,6 @@ $tabla .= '
                     <th>Telefono</th>
                     <th>Correo electronico</th>
                     <th>Total de venta</th>
-                    <th colspan="2">Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,12 +69,6 @@ if ($total >= 1 && $pagina <= $Npaginas) {
                     <td>' . $rows['tcliente_telefono'] . '</td>
                     <td>' . $rows['tcliente_email'] . '</td>
                     <td>' . $rows['tventa_total'] . '</td>
-                    <td>
-                        <a href="index.php?vista=cliente_update&cliente_id_up=' . $tcliente_id . '" class="button is-success is-rounded is-small">Actualizar</a>
-                    </td>
-                    <td>
-                        <a href="' . $url . $pagina . '&cliente_id_del=' . $tcliente_id . '" class="button is-danger is-rounded is-small">Eliminar</a>
-                    </td>
                 </tr>
             ';
         $contador++;
