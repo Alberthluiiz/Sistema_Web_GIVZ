@@ -11,13 +11,10 @@ que utilice, la base de datos se encuentra en la carpeta DB
 del servidor (en la funcion CONEXION).
 El archivo se encuentra en la carpeta (php) Solo debe de modificar la linea 6
 
-# Nombre de la base de datos -> dbname=givz_dbinventario
-
-# Usuario -> root
-
-# Contraseña ->
-
-# Si tiene configurado el phpmyadmin con cotraseña debe colocar la contraseña.
+### Nombre de la base de datos -> dbname=givz_dbinventario
+### Usuario -> root
+### Contraseña ->
+### Si tiene configurado el phpmyadmin con cotraseña debe colocar la contraseña.
 
 4.- Una vez levantado el servidor puede ingresar al sistema con los siguientes datos
 Usuario por defecto: Administrador
