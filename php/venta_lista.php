@@ -44,11 +44,11 @@ $tabla .= '
             <thead>
                 <tr class="has-text-centered">
                     <th>#</th>
-                    <th>Ruc o Cedula</th>
+                    <th>Ruc o Cédula</th>
                     <th>Nombre</th>
-                    <th>Venta</th>
-                    <th>Telefono</th>
-                    <th>Correo electronico</th>
+                    <th>Id_Venta</th>
+                    <th>Teléfono</th>
+                    <th>Correo electrónico</th>
                     <th>Total de venta</th>
                 </tr>
             </thead>

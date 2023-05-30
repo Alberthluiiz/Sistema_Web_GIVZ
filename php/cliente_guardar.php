@@ -36,7 +36,7 @@ if (verificar_datos("[0-9]{3,13}[- ]?[0-9]{3,7}[- ]?[0-9]{3,7}[- ]?[0-9]{1}", $i
     exit();
 }
 /* Nombre */
-if (verificar_datos("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}", $nombre)) {
+if (verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,250}", $nombre)) {
     echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>

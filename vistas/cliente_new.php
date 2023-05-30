@@ -31,8 +31,8 @@
             <!-- Nombre del cliente  -->
             <div class="column">
                 <div class="control">
-                    <label>Nombre</label>
-                    <input class="input" type="text" name="tcliente_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,}" maxlength="200" required>
+                    <label>Nombres completos</label>
+                    <input class="input" type="text" name="tcliente_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ.,\- ]{1,250}" maxlength="200" required>
                 </div>
             </div>
         </div>
@@ -56,14 +56,14 @@
             <!-- Telefono -->
             <div class="column">
                 <div class="control">
-                    <label>Telefono</label>
+                    <label>Teléfono</label>
                     <input class="input" type="text" name="tcliente_telefono" pattern="[0-9]{7,12}" maxlength="15" required>
                 </div>
             </div>
             <!-- Correo electronico -->
             <div class="column">
                 <div class="control">
-                    <label>Correo electronico</label>
+                    <label>Correo electrónico</label>
                     <input class="input" type="email" name="tcliente_email" maxlength="100">
                 </div>
             </div>

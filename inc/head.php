@@ -8,4 +8,4 @@
 <!--Bulma.io Icon CDN-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <!--Icono en el navegador-->
-<link rel="icon" href="/img/logo_blanco.png" type="image/png">
+<link rel="icon" href="./img/logo_blanco.png" type="image/png">
