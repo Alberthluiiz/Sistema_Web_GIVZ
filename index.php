@@ -36,6 +36,11 @@
         }
     }
     ?>
+    <footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f5f5f5; padding: 10px; text-align: center;">
+        <p>
+            <i class="fa-solid fa-copyright"></i> Todos los derechos reservados - Grupo 3 - <?php echo date("Y"); ?>
+        </p>
+    </footer>
 </body>
 
 </html>
