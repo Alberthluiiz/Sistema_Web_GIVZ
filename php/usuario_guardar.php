@@ -14,7 +14,7 @@ $clave_2 = limpiar_cadena($_POST['tusuario_clave_2']);
 
 
 /*== Verificando campos obligatorios ==*/
-if ($nombre == "" || $apellido == "" || $usuario == "" || $clave_1 == "" || $clave_2 == "") {
+if ($nombre == "" || $apellido == "" || $usuario == "" || $email == "" || $clave_1 == "" || $clave_2 == "") {
     echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
